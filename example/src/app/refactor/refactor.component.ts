@@ -1,7 +1,9 @@
+import { PersonService } from './../person.service';
 import { debounceTime } from 'rxjs/operators';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Person } from '../example/example.model';
 
 @Component({
   selector: 'app-refactor',
@@ -9,25 +11,18 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./refactor.component.scss']
 })
 export class RefactorComponent implements OnInit {
-  searchText: string;
-  searchSubject = new Subject();
+  searchSubject = new Subject<string>();
+  people: Observable<Person[]>;
 
-  constructor(private http: HttpClient) {
-    // console.log(searchResults);
-   }
+  constructor(private personService: PersonService) { }
 
   ngOnInit() {
-    this.searchText = '';
-
-    this.searchSubject.pipe(debounceTime(200)).subscribe(x => {
-      this.http.get(`things?search=${x}`).subscribe(val => {
-        
-      });
+    this.searchSubject.pipe(debounceTime(200)).subscribe(searchText => {
+      this.people = this.personService.searchPeople(searchText);
     });
   }
 
-  searchForThing(text: string) {
-    this.searchText = text;
-    this.searchSubject.next(this.searchText);
+  search(text: string) {
+    this.searchSubject.next(text);
   }
 }

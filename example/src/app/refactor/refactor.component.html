@@ -1,3 +1,7 @@
-<p>
-  refactor works!
-</p>
+<h3>Search for someone</h3>
+<input #searchInput (keyup)="search(searchInput.value)" />
+
+<h3>Results</h3>
+<ul>
+    <li *ngFor="let person of people | async">{{person.firstName}} {{person.lastName}}</li>
+</ul>

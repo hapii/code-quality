@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "firstName": "Kevin", 
+        "lastName": "Hamilton",
+        "age": 24,
+        "birthDate": "02/11/1994"
+    },
+    {
+        "id": 2,
+        "firstName": "Mario",
+        "lastName": "Odyssey",
+        "age": 33, 
+        "birthDate": "10/18/1985"
+
+    },
+    {
+        "id": 3,
+        "firstName": "Walter",
+        "lastName": "Bear",
+        "age": 8,
+        "birthDate": "07/31/2010"
+    },
+    {
+        "id": 4,
+        "firstName": "Jinn",
+        "lastName": "Birdling",
+        "age": 4,
+        "birthDate": "08/11/2014"
+    },
+    {
+        "id": 5,
+        "firstName": "Freya",
+        "lastName": "Lady",
+        "age": 8,
+        "birthDate": "04/14/2010"
+    },
+    {
+        "id": 6,
+        "firstName": "Loki",
+        "lastName": "Lion", 
+        "age": 3,
+        "birthDate": "11/30/2015"
+    },
+    {
+        "id": 7,
+        "firstName": "Thor",
+        "lastName": "Munchkin",
+        "age": 2,
+        "birthDate": "03/12/2016"
+    },
+    {
+        "id": 8,
+        "firstName": "Apollo",
+        "lastName": "Yellowfellow",
+        "age": 2,
+        "birthDate": "03/12/2016"
+    }
+]
